@@ -16,22 +16,20 @@ The demonstration follows a complete e-commerce user journey:
 
 ```mermaid
 flowchart TD
-    A["🔍 Product Discovery<br/>Natural language search across 634+ products<br/>in Hebrew categories"] --> B["💰 Price Comparison<br/>Multi-seller analysis with ratings<br/>and shipping costs"]
+    A["🔍 Product Discovery<br/>Natural language search across"] --> B["💰 Price Comparison<br/>Multi-seller analysis"]
     
-    B --> C["📦 Stock Verification<br/>Availability checking<br/>across multiple sellers"]
+    B --> C["📦 Stock Verification<br/>Availability checking"]
+
+    C --> D["🛒 Cart Management<br/>Session-based shopping cart<br/>with real-time totals"]
+
+    D --> E["💳 Checkout Flow<br/>Payment link generation<br/>(mock for demo purposes)"]
     
-    C --> D["💳 Checkout Flow<br/>Payment link generation<br/>(mock for demo purposes)"]
-    
-    D --> E["🛒 Cart Management<br/>Session-based shopping cart<br/>with real-time totals"]
-    
-    E --> F["🔗 Generate Purchase Link<br/>Create and send purchase link<br/>to user"]
-    
+        
     style A fill:#f8f9fa,stroke:#333,stroke-width:2px,color:#000
     style B fill:#f8f9fa,stroke:#333,stroke-width:2px,color:#000
     style C fill:#f8f9fa,stroke:#333,stroke-width:2px,color:#000
     style D fill:#f8f9fa,stroke:#333,stroke-width:2px,color:#000
     style E fill:#f8f9fa,stroke:#333,stroke-width:2px,color:#000
-    style F fill:#e8f4fd,stroke:#1976d2,stroke-width:2px,color:#000
 ```
 
 **Example Flow**: *"אני צריך מקרר חדש"* → Search → Compare → Add to cart → Checkout - all handled conversationally by Claude through MCP tools.
