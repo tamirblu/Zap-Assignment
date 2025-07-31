@@ -48,15 +48,14 @@ The demonstration follows a complete e-commerce user journey:
 **Ready-to-use MCP endpoint**: `https://zap-mcp-server-remote.onrender.com/mcp`
 
 **Setup in Claude (5-minute configuration):**
-1. Open the link - https://claude.ai/settings/connectors
-or
-1.
-  a. Open Claude and navigate to **Settings → Connectors**
-  b. Switch to **"Organization connectors"** tab
-  c. Find the **"Connectors"** section
-2. Click **"Add custom connector"**
-3. Paste: `https://zap-mcp-server-remote.onrender.com/mcp`
-4. Click **"Add"** to complete setup
+
+
+1. Open Claude and navigate to **Settings → Connectors** OR use the link and jump to step 4 - https://claude.ai/settings/connectors
+2. Switch to **"Organization connectors"** tab
+3. Find the **"Connectors"** section 
+4. Click **"Add custom connector"**
+5. Paste: `https://zap-mcp-server-remote.onrender.com/mcp`
+6. Click **"Add"** to complete setup
 
 **Try it**: Ask Claude *"Search for a coffee machine under 500 shekels"* and watch the MCP tools in action!
 
