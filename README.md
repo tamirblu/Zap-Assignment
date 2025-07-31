@@ -16,8 +16,6 @@ This project shows how AI assistants can connect directly to Zap platform, using
 
 <div align="center">
 
-[![Demo Video](https://img.shields.io/badge/🎥_Demo_Video-Watch_Now-red?style=for-the-badge)](https://github.com/tamirblu/Zap-Assignment/releases/download/v1.0.0/Zap-Video-Demo.mp4)
-
 [![Download Demo](https://img.shields.io/badge/📥_Download-3MB_MP4-blue?style=for-the-badge)](https://github.com/tamirblu/Zap-Assignment/releases/download/v1.0.0/Zap-Video-Demo.mp4)
 
 </div>
