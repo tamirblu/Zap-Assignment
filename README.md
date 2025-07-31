@@ -26,12 +26,12 @@ flowchart TD
     
     E --> F["🔗 Generate Purchase Link<br/>Create and send purchase link<br/>to user"]
     
-    style A fill:#f8f9fa,stroke:#333,stroke-width:2px
-    style B fill:#f8f9fa,stroke:#333,stroke-width:2px
-    style C fill:#f8f9fa,stroke:#333,stroke-width:2px
-    style D fill:#f8f9fa,stroke:#333,stroke-width:2px
-    style E fill:#f8f9fa,stroke:#333,stroke-width:2px
-    style F fill:#e8f4fd,stroke:#1976d2,stroke-width:2px
+    style A fill:#f8f9fa,stroke:#333,stroke-width:2px,color:#000
+    style B fill:#f8f9fa,stroke:#333,stroke-width:2px,color:#000
+    style C fill:#f8f9fa,stroke:#333,stroke-width:2px,color:#000
+    style D fill:#f8f9fa,stroke:#333,stroke-width:2px,color:#000
+    style E fill:#f8f9fa,stroke:#333,stroke-width:2px,color:#000
+    style F fill:#e8f4fd,stroke:#1976d2,stroke-width:2px,color:#000
 ```
 
 **Example Flow**: *"אני צריך מקרר חדש"* → Search → Compare → Add to cart → Checkout - all handled conversationally by Claude through MCP tools.
@@ -41,7 +41,7 @@ flowchart TD
 ### Research & Market Analysis
 - **Deep Research**: Analyzed MCP adoption trends across AI platforms, with Claude leading implementation
 - **Market Focus**: Identified Israeli e-commerce market needs through Zap.co.il structure analysis
-- **Category Mapping**: Scraped 634 official categories from Zap.co.il (חשמל ואלקטרוניקה > subcategories)
+- **Category Mapping**: Scraped 634 official categories from Zap.co.il (חשמל ואלקטרוניקה > subcategories) for close to real mock DB.
 
 ### Technical Approach
 - **Dual Architecture**: Both local (stdio) and remote (HTTP) servers for different use cases
