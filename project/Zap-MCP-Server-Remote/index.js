@@ -313,10 +313,13 @@ Image: ${product.image_url}`;
         const paymentUrl = `https://shop.zap.co.il/cart/${orderId}`;
         console.log(`Generated payment link for order ${orderId} totaling ₪${totalPrice} to ${user_email}.`);
 
+        // Clear the cart after generating payment link
+        cart.length = 0;
+
         return {
           content: [{
             type: "text",
-            text: `💳 Payment Link Generated\n\nOrder ID: ${orderId}\nTotal: ₪${totalPrice}\nPayment URL: ${paymentUrl}\n\n✉️ Link sent to: ${user_email}`
+            text: `💳 Payment Link Generated\n\nOrder ID: ${orderId}\nTotal: ₪${totalPrice}\nPayment URL: ${paymentUrl}\n\n✉️ Link sent to: ${user_email}\n\n🛒 Cart has been cleared`
           }]
         };
       } catch (error) {
@@ -419,11 +422,6 @@ app.get('/', (req, res) => {
         path: "/api/cart/add",
         body: { product_id: "string", seller_id: "string", quantity: "number" },
         description: "Add items to shopping cart"
-      },
-      view_cart: {
-        method: "GET",
-        path: "/api/cart",
-        description: "View current cart contents and totals"
       },
       generate_payment: {
         method: "POST",
@@ -598,33 +596,6 @@ app.post('/api/cart/add', (req, res) => {
   }
 });
 
-app.get('/api/cart', (req, res) => {
-  try {
-    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-    const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-
-    res.json({
-      total_items: totalItems,
-      total_price: totalPrice,
-      items: cart.map(item => {
-        const product = products.find(p => p.id === item.product_id);
-        const seller = sellers.find(s => s.id === item.seller_id);
-        return {
-          product_id: item.product_id,
-          product_name: product?.name,
-          seller_id: item.seller_id,
-          seller_name: seller?.name,
-          quantity: item.quantity,
-          unit_price: item.price,
-          total_price: item.price * item.quantity
-        };
-      })
-    });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
 app.post('/api/payment/generate', (req, res) => {
   try {
     const { user_email } = req.body;
@@ -641,13 +612,16 @@ app.post('/api/payment/generate', (req, res) => {
     const orderId = `ZAP-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
     const paymentUrl = `https://shop.zap.co.il/cart/${orderId}`;
 
+    // Clear the cart after generating payment link
+    cart.length = 0;
+
     res.json({
       success: true,
       order_id: orderId,
       total_price: totalPrice,
       payment_url: paymentUrl,
       user_email: user_email,
-      message: `Payment link generated for order ${orderId}`
+      message: `Payment link generated for order ${orderId}. Cart has been cleared.`
     });
   } catch (error) {
     res.status(500).json({ error: error.message });

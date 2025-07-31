@@ -1,14 +1,14 @@
 # Zap E-commerce MCP Integration
 
-> **Proof of Concept**: Remote Model Context Protocol (MCP) server implementation for Zap.co.il, Israel's leading price comparison platform.
+> **Proof of Concept**: Remote Model Context Protocol (MCP) server implementation for Zap.co.il.
 
 ## 🎯 Overview
 
-This project demonstrates how AI applications can be extended with real-world e-commerce capabilities through Anthropic's Model Context Protocol (MCP). While we focus on Claude as the primary example (being the leader in MCP adoption), this same integration approach works across AI assistant platforms. ChatGPT has begun early-stage MCP implementation available to Pro subscribers for advanced research, with broader rollout expected as the protocol gains industry adoption.
+This project demonstrates how AI applications can be extended with real-world e-commerce capabilities through Anthropic's Model Context Protocol (MCP). While we focus on Claude as the primary example (being the leader in MCP adoption), this same integration approach works across AI assistant platforms like the GPT's and many more. 
 
 By implementing both local and remote MCP servers, this POC showcases how AI can interact with product catalogs, price comparisons, and shopping workflows in a structured, scalable way.
 
-**Key Capability**: Transform Claude into an intelligent shopping assistant that can search products, compare prices across sellers, manage shopping carts, and generate payment links - all through natural language conversations.
+**Key Capability**: Transform any MCP-compatible AI into an intelligent shopping assistant that can search products, compare prices across sellers, manage shopping carts, and generate payment links - all through natural language conversations.
 
 ## 📊 Dataset & Assumptions
 
@@ -30,12 +30,13 @@ By implementing both local and remote MCP servers, this POC showcases how AI can
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                     AI Applications                             │
+│                  MCP-Compatible AI Platforms                   │
 │  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
-│  │   Claude Web    │  │ Claude Desktop  │  │   Claude CLI    │ │
+│  │   ChatGPT       │  │   Claude        │  │   Other MCP     │ │
+│  │   (Custom GPT)  │  │   (Desktop/Web) │  │   Platforms     │ │
 │  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
 └─────────────────────────────┬───────────────────────────────────┘
-                              │ MCP Protocol
+                              │ MCP Protocol 
                               │
         ┌─────────────────────┼─────────────────────┐
         │                     │                     │
@@ -65,6 +66,7 @@ By implementing both local and remote MCP servers, this POC showcases how AI can
 ```
 
 **Focus: Remote MCP Implementation**
+- **Custom ChatGPT**: Hosted At - https://chatgpt.com/g/g-688b4875d61c81918746a73da6c90812-zap-mcp-mock
 - **Cloud Deployment**: Hosted on Render with auto-scaling capabilities → [**Live Demo**](https://zap-mcp-server-remote.onrender.com)
 - **HTTP Transport**: Uses StreamableHTTP for browser-based MCP clients
 - **Session Management**: Multi-user support with session isolation
@@ -75,25 +77,25 @@ By implementing both local and remote MCP servers, this POC showcases how AI can
 ### Natural Language Shopping Experience
 
 ```
-1. 👤 User: "I need a coffee machine under 500 shekels"
-   🤖 Claude → product_search("coffee machine", {price_max: 500})
-   📊 Results: DeLonghi Magnifica S (₪499) + other options
+1. 👤 User: "אני מעוניין לקנות מחשב" (I want to buy a computer)
+   🤖 AI → product_search("מחשב")
+   📊 Results: ASUS ROG Strix G15 (₪4,899) + other options
 
-2. 👤 User: "Compare prices for the DeLonghi one"
-   🤖 Claude → compare_prices("1001")
-   📊 Results: 4 sellers with prices, ratings, shipping costs
+2. 👤 User: "האם המחשב גיימינג יוכל לשמש אותי גם ללימודים?" (Can the gaming computer work for studies too?)
+   🤖 AI → get_product_details("1001")
+   📊 Results: Full specs + suitability analysis
 
-3. 👤 User: "Add it from TechZone IL to my cart"
-   🤖 Claude → add_to_cart("1001", "seller_001", 1)
-   📊 Results: Cart updated with total ₪524 (including shipping)
+3. 👤 User: "נשמע מעולה" (Sounds great)
+   🤖 AI → compare_prices("1001")
+   📊 Results: 3 sellers, GadgetPro highest rated (4.9⭐)
 
-4. 👤 User: "I'm ready to checkout"
-   🤖 Claude → generate_payment_link("user@example.com")
-   📊 Results: Mock payment URL generated
+4. 👤 User: "אני מעדיף את החברה עם הדירוג הגבוה ביותר" (I prefer the highest-rated company)
+   🤖 AI → add_to_cart("1001", "seller_003", 1)
+   📊 Results: Cart total ₪5,228 including shipping
 
-5. 👤 User: "Check if it's still in stock"
-   🤖 Claude → check_availability("1001", "seller_001")
-   📊 Results: ✅ 23 units available, 1-2 business days delivery
+5. 👤 User: "המייל שלי - test@gmail.com" (My email is...)
+   🤖 AI → generate_payment_link("test@gmail.com")
+   📊 Results: ✅ Payment link generated with order #ZAP-1753926849308
 ```
 
 ### Available MCP Tools
@@ -125,31 +127,3 @@ By implementing both local and remote MCP servers, this POC showcases how AI can
 - **Price Alerts**: Notification system for price drops
 - **Order History**: Persistent user purchase tracking
 - **Advanced Search**: AI-powered product recommendations
-
----
-
-
-## 🛠️ Quick Start
-
-### Remote Server (Recommended)
-
-**Ready-to-use MCP endpoint**: `https://zap-mcp-server-remote.onrender.com/mcp`
-
-**Setup in Claude (5-minute configuration):**
-
-1. Open Claude and navigate to **Settings → Connectors**
-2. Switch to **"Organization connectors"** tab
-3. Find the **"Connectors"** section
-4. Click **"Add custom connector"**
-5. Paste: `https://zap-mcp-server-remote.onrender.com/mcp`
-6. Click **"Add"** to complete setup
-
-**Test it**: Ask Claude *"Search for a coffee machine under 500 shekels"* and watch the MCP tools in action!
-
-📖 **Detailed guide**: `/Zap-MCP-Server-Remote/README.md`
-
-### Local Development Server
-
-📖 **Development guide**: `/Zap-MCP-Server/README.md`
-
-**Stack**: TypeScript, Node.js, Express, MCP SDK, Zod validation

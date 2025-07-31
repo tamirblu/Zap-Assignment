@@ -1,12 +1,13 @@
 # Zap E-commerce MCP Integration
 
-> **AI-Powered Shopping Assistant**: Transform Claude into an intelligent e-commerce companion through Anthropic's Model Context Protocol (MCP).
+> **AI-Powered Shopping Assistant**: Transform any MCP-compatible AI into an intelligent e-commerce companion through Anthropic's Model Context Protocol (MCP).
 
 ## Description
 
-This project shows how AI assistants can connect directly to Zap platform, using the Model Context Protocol (MCP). By running both local and remote MCP servers, chat-based agents can search the Zap catalog, compare prices, and build a cart and send generated link for purchase, all through natural-language conversations, no hyphens needed.
+This project shows how AI assistants can connect directly to Zap platform, using the Model Context Protocol (MCP). By implementing both local and remote MCP servers, this integration enables chat-based agents to search product catalogs, compare prices, build shopping carts and generate purchase links through natural-language conversations.
 
-**Core Innovation**: Transform Claude into an intelligent shopping assistant that can search products, compare prices across sellers, manage shopping carts, and generate payment links - all through conversational AI.
+
+**Core Innovation**: Transform any MCP-compatible AI into an intelligent shopping assistant that can search products, compare prices across sellers, manage shopping carts, and generate payment links - all through conversational AI.
 
 ## Demo Logic
 
@@ -17,7 +18,7 @@ The demonstration follows a complete e-commerce user journey:
 4. **Checkout Flow** - Payment link generation (mock for demo purposes)
 5. **Stock Verification** - Availability checking across multiple sellers
 
-**Example Flow**: *"I need a coffee machine under 500 shekels"* → Search → Compare → Add to cart → Checkout - all handled conversationally by Claude through MCP tools.
+**Example Flow**: *"אני צריך מקרר חדש"* → Search → Compare → Add to cart → Checkout - all handled conversationally by Claude through MCP tools.
 
 ## Thought Process & Methodology
 
@@ -34,6 +35,13 @@ The demonstration follows a complete e-commerce user journey:
 
 ### Demo Test
 
+## Using ChatGPT - Custom GPT
+
+- **Hebrew - Consive Tone**
+https://chatgpt.com/g/g-688b4875d61c81918746a73da6c90812-zap-mcp-mock/c/688b4d07-914c-832c-b758-8bc9045d29bc
+
+## Using Claude 
+
 - **Hebrew - Consive Tone** - https://claude.ai/share/4b6ff194-b97b-4f6b-899a-761ffe663907
 - **Hebrew - None Formal Tone** - https://claude.ai/share/0ab0eda9-80c1-4821-9db2-cc304dbf4cb6
 - **English - Consive Tone** - https://claude.ai/share/4aac91d1-0daf-48f4-aada-6903181ea887
@@ -45,9 +53,22 @@ The demonstration follows a complete e-commerce user journey:
 
 ### 🚀 Quick Start - Remote Server (Recommended)
 
+#### Option 1: Custom ChatGPT (Quickest)
+
+**Zap MCP Mock GPT** - https://chatgpt.com/g/g-688b4875d61c81918746a73da6c90812-zap-mcp-mock
+
+#### Pre-configured ChatGPT with direct MCP integration - just start chatting!
+
+- No setup required
+- Instant access to all MCP tools
+- Natural language shopping experience
+
+#### Option 2: Setup in Claude (Recommended)
+
+***NOTICE - for paying subscriptions***
+
 **Ready-to-use MCP endpoint**: `https://zap-mcp-server-remote.onrender.com/mcp`
 
-**Setup in Claude (5-minute configuration):**
 
 Use the link and jump to step **4** - https://claude.ai/settings/connectors
 
@@ -58,7 +79,7 @@ Use the link and jump to step **4** - https://claude.ai/settings/connectors
 5. Paste: `https://zap-mcp-server-remote.onrender.com/mcp`
 6. Click **"Add"** to complete setup
 
-**Try it**: Ask Claude *"Search for a coffee machine under 500 shekels"* and watch the MCP tools in action!
+**Try it**: Ask Claude *"אני צריך מקרר חדש"* and watch the MCP tools in action!
 
 ⚠️ **Note**: Render free tier hibernates after 15 minutes of inactivity - first call may fail and will wake the instance.
 
@@ -101,13 +122,6 @@ Add to your MCP client settings:
 - `add_to_cart` - Virtual shopping cart management
 - `generate_payment_link` - Checkout URL generation
 
-### 🧪 Quick try using this queries:
-
-Once configured, try these sample queries in Claude:
-- *"Find smartphones under 2000 shekels"*
-- *"Compare prices for iPhone 15"*
-- *"Add the cheapest one to my cart"*
-- *"Check what's in my cart and generate a payment link"*
 
 ## Project Structure
 
