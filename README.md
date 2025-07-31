@@ -48,9 +48,9 @@ The demonstration follows a complete e-commerce user journey:
 **Ready-to-use MCP endpoint**: `https://zap-mcp-server-remote.onrender.com/mcp`
 
 **Setup in Claude (5-minute configuration):**
+Use the link and jump to step **4** - https://claude.ai/settings/connectors
 
-
-1. Open Claude and navigate to *Settings → Connectors* **OR** use the link and jump to step 4 - https://claude.ai/settings/connectors
+1. Open Claude and navigate to *Settings → Connectors*  
 2. Switch to **"Organization connectors"** tab
 3. Find the **"Connectors"** section 
 4. Click **"Add custom connector"**
