@@ -50,7 +50,7 @@ The demonstration follows a complete e-commerce user journey:
 **Setup in Claude (5-minute configuration):**
 
 
-1. Open Claude and navigate to **Settings → Connectors** OR use the link and jump to step 4 - https://claude.ai/settings/connectors
+1. Open Claude and navigate to *Settings → Connectors* **OR** use the link and jump to step 4 - https://claude.ai/settings/connectors
 2. Switch to **"Organization connectors"** tab
 3. Find the **"Connectors"** section 
 4. Click **"Add custom connector"**
