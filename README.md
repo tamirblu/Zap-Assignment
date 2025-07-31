@@ -10,9 +10,17 @@ This project shows how AI assistants can connect directly to Zap platform, using
 
 **Core Innovation**: Transform any MCP-compatible AI into an intelligent shopping assistant that can search products, compare prices across sellers, manage shopping carts, and generate payment links - all through conversational AI.
 
-# Direct link
 ## Demo Video
-[Download Demo Video](https://github.com/tamirblu/Zap-Assignment/raw/main/Zap-Video-Demo.mp4)
+
+### 📹 Watch the Demo
+
+<div align="center">
+
+[![Demo Video](https://img.shields.io/badge/🎥_Demo_Video-Watch_Now-red?style=for-the-badge)](https://github.com/tamirblu/Zap-Assignment/releases/download/v1.0.0/Zap-Video-Demo.mp4)
+
+[![Download Demo](https://img.shields.io/badge/📥_Download-3MB_MP4-blue?style=for-the-badge)](https://github.com/tamirblu/Zap-Assignment/releases/download/v1.0.0/Zap-Video-Demo.mp4)
+
+</div>
 
 
 ## Demo Logic
