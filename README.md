@@ -163,5 +163,3 @@ Add to your MCP client settings:
 - **Data**: JSON-based mock datasets
 
 ---
-
-*Built as a proof of concept for AI-driven e-commerce integration using Anthropic's Model Context Protocol.*
