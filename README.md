@@ -4,7 +4,7 @@
 
 ## Description
 
-This project demonstrates how AI applications can be extended with real-world e-commerce capabilities, specifically focusing on Israel's leading price comparison platform, Zap.co.il. By implementing both local and remote MCP servers, we showcase how AI can interact with product catalogs, price comparisons, and shopping workflows through natural language conversations.
+This project shows how AI assistants can connect directly to Zap platform, using the Model Context Protocol (MCP). By running both local and remote MCP servers, chat-based agents can search the Zap catalog, compare prices, and build a cart and send generated link for purchase, all through natural-language conversations, no hyphens needed.
 
 **Core Innovation**: Transform Claude into an intelligent shopping assistant that can search products, compare prices across sellers, manage shopping carts, and generate payment links - all through conversational AI.
 
@@ -28,15 +28,17 @@ The demonstration follows a complete e-commerce user journey:
 
 ### Technical Approach
 - **Dual Architecture**: Both local (stdio) and remote (HTTP) servers for different use cases
-- **Protocol Selection**: MCP chosen for its structured tool calling vs generic API approaches
-- **Data Generation**: Script-based mock product creation ensuring category coverage
-- **Validation Strategy**: Zod schema validation for data integrity
+- **Protocol Selection**: MCP chosen for its structured tool calling and it's generally adopted
+- **Data Generation**: Script-based mock product creation ensuring category coverage - based on zap web data.
+- **Israeli Localization**: NIS pricing, Hebrew categories, local seller names - works great using Hebrew.
 
-### Best Practices Applied
-- **Session Isolation**: Multi-user support with separate cart sessions
-- **Error Handling**: Graceful degradation for stock/availability issues
-- **CORS Configuration**: Browser-compatible remote server setup
-- **Israeli Localization**: NIS pricing, Hebrew categories, local seller names
+### Demo
+
+- **English - Consive Tone** - https://claude.ai/share/4aac91d1-0daf-48f4-aada-6903181ea887
+- **Hebrew - Consive Tone** - https://claude.ai/share/4b6ff194-b97b-4f6b-899a-761ffe663907
+- **Hebrew - None Formal Tone** - https://claude.ai/share/0ab0eda9-80c1-4821-9db2-cc304dbf4cb6
+
+
 
 ## Usage Instructions
 
@@ -57,25 +59,21 @@ The demonstration follows a complete e-commerce user journey:
 
 ⚠️ **Note**: Render free tier hibernates after 15 minutes of inactivity - first call may fail and will wake the instance.
 
-### 🛠️ Local Development Setup
+### Alternative - 🛠️ Local Server Usage Setup
 
 **Prerequisites:**
 - Node.js 18+
-- TypeScript
 
 **Installation:**
 ```bash
-# Navigate to local server
-cd ZapMCP/Zap-MCP-Server
+# Install globally
+npm install -g zap-mcp-server-home-assigment
 
-# Install dependencies
-npm install
+## MCP Client Configuration
 
-# Build the project
-npm run build
+Add to your MCP client settings:
 
-# Start the server
-npm start
+
 ```
 
 **Claude Configuration for Local Server:**
@@ -84,9 +82,9 @@ npm start
 ```json
 {
   "mcpServers": {
-    "zap-mcp": {
-      "command": "node",
-      "args": ["/path/to/Zap-Task/ZapMCP/Zap-MCP-Server/build/index.js"]
+    "zap-mcp-server-home-assigment": {
+      "command": "npx",
+      "args": ["zap-mcp-server-home-assigment"],
     }
   }
 }
@@ -100,7 +98,7 @@ npm start
 - `add_to_cart` - Virtual shopping cart management
 - `generate_payment_link` - Checkout URL generation
 
-### 🧪 Testing the Integration
+### 🧪 Quick try using this queries:
 
 Once configured, try these sample queries in Claude:
 - *"Find smartphones under 2000 shekels"*
