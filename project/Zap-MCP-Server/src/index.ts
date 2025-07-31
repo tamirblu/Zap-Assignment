@@ -99,7 +99,7 @@ function loadData() {
 
 const server = new McpServer({
   name: "zap-mcp-server-home-assigment",
-  version: "1.0.5",
+  version: "1.0.6",
   capabilities: {
     resources: {},
     tools: {},
@@ -495,7 +495,7 @@ Shipping: ₪${seller.shipping_cost} (${seller.shipping_time})`
 
 async function main() {
   try {
-    console.error("Starting Zap MCP Server v1.0.5");
+    console.error("Starting Zap MCP Server v1.0.6");
     loadData();
     
     const transport = new StdioServerTransport();

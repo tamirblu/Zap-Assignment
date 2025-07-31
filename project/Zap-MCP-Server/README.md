@@ -17,7 +17,7 @@ Add to your MCP client settings:
   "mcpServers": {
     "zap-mcp-server-home-assigment": {
       "command": "npx",
-      "args": ["zap-mcp-server-home-assigment"],
+      "args": ["zap-mcp-server-home-assigment"]
     }
   }
 }
