@@ -26,12 +26,12 @@ flowchart TD
     
     E --> F["🔗 Generate Purchase Link<br/>Create and send purchase link<br/>to user"]
     
-    style A fill:#e1f5fe
-    style B fill:#f3e5f5
-    style C fill:#fce4ec
-    style D fill:#fff3e0
-    style E fill:#e8f5e8
-    style F fill:#e1f5fe
+    style A fill:#f8f9fa,stroke:#333,stroke-width:2px
+    style B fill:#f8f9fa,stroke:#333,stroke-width:2px
+    style C fill:#f8f9fa,stroke:#333,stroke-width:2px
+    style D fill:#f8f9fa,stroke:#333,stroke-width:2px
+    style E fill:#f8f9fa,stroke:#333,stroke-width:2px
+    style F fill:#e8f4fd,stroke:#1976d2,stroke-width:2px
 ```
 
 **Example Flow**: *"אני צריך מקרר חדש"* → Search → Compare → Add to cart → Checkout - all handled conversationally by Claude through MCP tools.
