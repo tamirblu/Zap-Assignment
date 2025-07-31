@@ -63,7 +63,7 @@ flowchart TD
 ## Using ChatGPT - Custom GPT
 
 - **Hebrew - Consive Tone**
-https://chatgpt.com/g/g-688b4875d61c81918746a73da6c90812-zap-mcp-mock/c/688b4d07-914c-832c-b758-8bc9045d29bc
+https://chatgpt.com/g/g-688b4875d61c81918746a73da6c90812-zap-mcp-mock/c/688b7c0d-0d94-8329-ba75-bc21dd53af7e
 
 ## Using Claude 
 
