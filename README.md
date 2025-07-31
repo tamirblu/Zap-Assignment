@@ -32,11 +32,12 @@ The demonstration follows a complete e-commerce user journey:
 - **Data Generation**: Script-based mock product creation ensuring category coverage - based on zap web data.
 - **Israeli Localization**: NIS pricing, Hebrew categories, local seller names - works great using Hebrew.
 
-### Demo
+### Demo Test
 
-- **English - Consive Tone** - https://claude.ai/share/4aac91d1-0daf-48f4-aada-6903181ea887
 - **Hebrew - Consive Tone** - https://claude.ai/share/4b6ff194-b97b-4f6b-899a-761ffe663907
 - **Hebrew - None Formal Tone** - https://claude.ai/share/0ab0eda9-80c1-4821-9db2-cc304dbf4cb6
+- **English - Consive Tone** - https://claude.ai/share/4aac91d1-0daf-48f4-aada-6903181ea887
+
 
 
 
