@@ -1,6 +1,7 @@
-# Zap E-commerce MCP Integration
+# Zap AI Assigment - MCP Integration
 
-> **AI-Powered Shopping Assistant**: Transform any MCP-compatible AI into an intelligent e-commerce companion through Anthropic's Model Context Protocol (MCP).
+
+> **AI-Powered Shopping Assistant**: Transform any MCP-compatible AI into an intelligent e-commerce companion through Anthropic's Model Context Protocol (MCP) Integrated to Zap platform.
 
 ## Description
 
@@ -12,11 +13,26 @@ This project shows how AI assistants can connect directly to Zap platform, using
 ## Demo Logic
 
 The demonstration follows a complete e-commerce user journey:
-1. **Product Discovery** - Natural language search across 634+ products in Hebrew categories
-2. **Price Comparison** - Multi-seller analysis with ratings and shipping costs
-3. **Cart Management** - Session-based shopping cart with real-time totals
-4. **Checkout Flow** - Payment link generation (mock for demo purposes)
-5. **Stock Verification** - Availability checking across multiple sellers
+
+```mermaid
+flowchart TD
+    A["🔍 Product Discovery<br/>Natural language search across 634+ products<br/>in Hebrew categories"] --> B["💰 Price Comparison<br/>Multi-seller analysis with ratings<br/>and shipping costs"]
+    
+    B --> C["📦 Stock Verification<br/>Availability checking<br/>across multiple sellers"]
+    
+    C --> D["💳 Checkout Flow<br/>Payment link generation<br/>(mock for demo purposes)"]
+    
+    D --> E["🛒 Cart Management<br/>Session-based shopping cart<br/>with real-time totals"]
+    
+    E --> F["🔗 Generate Purchase Link<br/>Create and send purchase link<br/>to user"]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style C fill:#fce4ec
+    style D fill:#fff3e0
+    style E fill:#e8f5e8
+    style F fill:#e1f5fe
+```
 
 **Example Flow**: *"אני צריך מקרר חדש"* → Search → Compare → Add to cart → Checkout - all handled conversationally by Claude through MCP tools.
 
