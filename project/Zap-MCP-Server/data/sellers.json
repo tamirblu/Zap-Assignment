@@ -1,0 +1,30 @@
+[
+  {
+    "id": "seller_001",
+    "name": "TechZone IL",
+    "rating": 4.8,
+    "shipping_cost": 25,
+    "shipping_time": "1-2 business days"
+  },
+  {
+    "id": "seller_002", 
+    "name": "ElectroMax",
+    "rating": 4.6,
+    "shipping_cost": 15,
+    "shipping_time": "2-3 business days"
+  },
+  {
+    "id": "seller_003",
+    "name": "GadgetPro",
+    "rating": 4.9,
+    "shipping_cost": 35,
+    "shipping_time": "1 business day"
+  },
+  {
+    "id": "seller_004",
+    "name": "BestPrice Store",
+    "rating": 4.4,
+    "shipping_cost": 0,
+    "shipping_time": "3-5 business days"
+  }
+]

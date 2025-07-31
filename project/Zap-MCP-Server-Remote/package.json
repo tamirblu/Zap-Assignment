@@ -1,0 +1,25 @@
+{
+  "name": "zap-mcp-server-remote",
+  "version": "1.0.0",
+  "description": "Remote MCP server for Zap.co.il integration",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "build": "echo 'No build step needed'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["mcp", "zap", "ecommerce", "remote", "server"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "zod": "^3.25.46"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
