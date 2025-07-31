@@ -16,7 +16,7 @@ The demonstration follows a complete e-commerce user journey:
 
 ```mermaid
 flowchart TD
-    A["🔍 Product Discovery<br/>Natural language search across"] --> B["💰 Price Comparison<br/>Multi-seller analysis"]
+    A["🔍 Product Discovery<br/>Natural language search"] --> B["💰 Price Comparison<br/>Multi-seller analysis"]
     
     B --> C["📦 Stock Verification<br/>Availability checking"]
 
