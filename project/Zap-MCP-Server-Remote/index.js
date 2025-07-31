@@ -15,11 +15,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // CORS configuration for browser-based MCP clients
-app.use(cors({
-  origin: '*', // Configure appropriately for production
-  exposedHeaders: ['Mcp-Session-Id'],
-  allowedHeaders: ['Content-Type', 'mcp-session-id'],
-}));
+app.use(cors());
 
 app.use(express.json());
 
