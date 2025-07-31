@@ -12,7 +12,7 @@ This project shows how AI assistants can connect directly to Zap platform, using
 
 # Direct link
 ## Demo Video
-[Download Demo Video](https://github.com/tamirblu/Zap-Assignment/blob/master/Zap-Video-Demo.mp4)
+[Download Demo Video](https://github.com/tamirblu/Zap-Assignment/raw/main/Zap-Video-Demo.mp4)
 
 
 ## Demo Logic

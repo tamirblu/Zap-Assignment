@@ -54,7 +54,7 @@ jspm_packages/
 *.swo
 *~
 # Zap-Video-Demo.mp4
-.gitattributes
+# .gitattributes
 
 # OS generated files
 .DS_Store
